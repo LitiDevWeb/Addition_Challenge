@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Including Libararies: REACT, REACTDOM, BABEL-->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React</title>
+  </head>
+
+  <!--Component is a modular and reusable part of a web application that represents a specific element or 
+         functionality. -->
+  <!--Props (short for properties) are the parameters or inputs passed to a component to customize
+         its display or behavior-->
+  <!--State refers to the internal data that a component can hold and manage.
+         It allows the component to store and update information that can affect its rendering or behavior-->
+
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+      function Hello(props) {
+        return <h1>Hello, {props.name}!</h1>;
+      }
+
+      function App() {
+        return (
+          <div>
+            <Hello name="Khaled" />
+            <Hello name="Litissia" />
+            <Hello name="Nelya" />
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, document.querySelector("#app"));
+    </script>
+  </body>
+</html>
